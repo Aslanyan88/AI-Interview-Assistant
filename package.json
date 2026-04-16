@@ -1,0 +1,17 @@
+{
+  "name": "ai-interview-assistant",
+  "version": "2.0.0",
+  "description": "Real-time AI-powered interview coaching with multi-provider support",
+  "private": true,
+  "scripts": {
+    "setup": "cd server && npm install && cd ../client && npm install",
+    "start": "concurrently -n server,client -c blue,green \"cd server && npm start\" \"cd client && npm run dev\"",
+    "build": "cd client && npm run build"
+  },
+  "keywords": ["interview", "ai", "coaching", "openai", "ollama", "mistral"],
+  "author": "Aslanyan88",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
